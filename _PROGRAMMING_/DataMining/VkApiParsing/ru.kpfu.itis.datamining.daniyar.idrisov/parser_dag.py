@@ -2,6 +2,8 @@ import requests
 import time
 import psycopg2
 
+import datatime
+
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 import re
