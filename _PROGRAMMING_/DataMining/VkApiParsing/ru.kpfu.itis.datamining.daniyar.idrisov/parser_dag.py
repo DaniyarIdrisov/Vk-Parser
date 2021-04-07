@@ -3,8 +3,7 @@ import time
 import psycopg2
 
 from airflow.models import DAG
-from airflow.operators.python_operator import PythonOperator
-import re
+from airflow.operators.bash import BashOperator
 
 args = {
     'owner': 'daniyar',
@@ -81,7 +80,7 @@ def write_into_database():
 
 
 with DAG(dag_id='parser_dag', default_args=args, schedule_interval=None) as dag:
-    vk_parser = PythonOperator(
+    vk_parser = BashOperator(
         task_id='parser_words',
         python_callable=write_into_database,
         dag=dag
