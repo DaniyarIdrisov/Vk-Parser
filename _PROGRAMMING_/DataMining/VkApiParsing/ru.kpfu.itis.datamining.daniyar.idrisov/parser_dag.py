@@ -15,12 +15,12 @@ args = {
     'depends_on_past': False,
 }
 
-access_token = 'eada3759eada3759eada3759e6eaacaccdeeadaeada37598aedeb349664d3a96659dc6f'
+access_token = ''
 domain_name = 'itis_kfu'
 vk_api_version = '5.130'
 number_of_posts = 100
 offset_size = 0
-connection = psycopg2.connect(database='postgres', user='postgres', password='qwerty007', host='datamining-db.c9tzcqwjjfnn.us-east-1.rds.amazonaws.com', port='5432')
+connection = psycopg2.connect(database='postgres', user='postgres', password='', host='', port='5432')
 
 
 def get_posts():
